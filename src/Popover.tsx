@@ -201,7 +201,7 @@ export class Popover extends React.PureComponent<PopoverProps, PopoverState> {
     return { x: anchor.x - popoverCenter.x, y: anchor.y - popoverCenter.y };
   };
 
-  componentWillReceiveProps(nextProps: PopoverProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: PopoverProps) {
     const willBeVisible = nextProps.visible;
     const { visible, fromRect, displayArea } = this.props;
 
